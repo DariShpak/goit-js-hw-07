@@ -23,7 +23,7 @@ const gallery = document.querySelector(".gallery")
   })();
 
 
-let lightbox = new SimpleLightbox(".gallery li a", {
+const lightbox = new SimpleLightbox(".gallery li a", {
   captionsData: "alt",
   captionPosition: "bottom",
   captionDelay: 250,
