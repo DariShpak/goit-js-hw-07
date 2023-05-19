@@ -21,9 +21,9 @@ gallery.addEventListener("click", onImgClick)
 
 function onImgClick(event) {
  event.preventDefault()
-  
-  if (!event.target.classList.contains('gallery__image')) {
-    return;
+
+  if (!event.target.nodeName === 'img') {
+    return
   }
     const instance = basicLightbox.create(
       `<img src="${event.target.dataset.source}" width="1280" height="853">`,
