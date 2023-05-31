@@ -3,16 +3,21 @@
 
 console.log(galleryItems)
 
-const gallery = document.querySelector(".gallery");
 
-(function () {
-const markupGallery = galleryItems.map(({preview, original, description}) =>
-  `<li class="gallery__item">
+const gallery = document.querySelector(".gallery")
+
+;(function () {
+  const markupGallery = galleryItems
+    .map(
+      ({preview, original, description}) =>
+        `<li class="gallery__item">
     <a class="gallery__link" href="${original}">
      <img class="gallery__image" src="${preview}" 
-     data-source="${original}" alt="${description}"/>
+     alt="${description}"/>
    </a>
-  </li>`).join("")
+  </li>`
+    )
+    .join("")
 
   gallery.insertAdjacentHTML("beforeend", markupGallery)
 })()
